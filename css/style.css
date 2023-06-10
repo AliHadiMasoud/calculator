@@ -13,7 +13,7 @@ html,
 body {
   max-height: 100%;
   width: 100%;
-  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif; */
 }
 .container {
   width: 100%;
@@ -52,8 +52,8 @@ body {
   flex-flow: row-reverse nowrap;
 }
 .btn-header1 {
-  font-size: 10px;
-  font-weight: 600;
+  font-size: 8px;
+  font-weight: 400;
   justify-content: center;
   padding: 7px 15px 3px 15px;
   justify-items: center;
@@ -68,6 +68,10 @@ body {
 }
 .btn-header2:hover {
   background-color: var(--color-hover);
+}
+.restoreup {
+  width: 14px;
+  height: 14px;
 }
 .btn-header3 {
   justify-content: center;
@@ -106,8 +110,14 @@ body {
   background-color: var(--color-hover);
 }
 .Standard {
-  font-size: 15px;
-  font-weight: 300;
+  font-size: 14px;
+}
+
+.minus {
+  width: 12px;
+}
+.restore {
+  width: 13px;
 }
 .keep-btn {
   padding: 10px 10px 12px 10px;
@@ -130,8 +140,8 @@ body {
   direction: rtl;
 }
 .zero-right {
-  font-size: 50px;
-  font-weight: 600;
+  font-size: 40px;
+  font-weight: 500;
   padding-top: 20px;
   margin-right: 20px;
 }
@@ -148,8 +158,8 @@ body {
 .memory-btn-style {
   padding: 10px 30px 10px 30px;
   margin: 5px 0 0 0;
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: 900;
+  font-size: 12px;
 }
 
 .memory-btn1,
@@ -190,21 +200,21 @@ body {
 }
 .btn-number {
   background-color: var(--clolor-btn-num);
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 400;
 }
 .radical,
 .x-resize {
-  font-weight: 600;
-  font-size: 20px;
-  width: 30px;
+  font-weight: 400;
+  font-size: 10px;
+  width: 20px;
 }
 .x-resize {
-  width: 22px;
+  width: 20px;
 }
 .btn-clean {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 400;
 }
 .dot {
   font-weight: 500;
@@ -246,20 +256,34 @@ body {
   .btn-header3 {
     display: none;
   }
+  .btn-header2 {
+    display: flex;
+  }
 }
-@media (max-width: 500px) {
-  .memory-btn6 {
-    display: block;
+@media (max-width: 451px) {
+  .right-side {
+    display: none;
+  }
+  .btn-area {
+    width: 100%;
+  }
+  .container {
+    grid-template-areas:
+      "header   header"
+      "navbar   navar"
+      "zero     zero"
+      "memory-btn  memory-btn "
+      "btn-area   btn-area ";
   }
   .memory-btn-style {
+    width: 100%;
     padding: 10px 15px 8px 15px;
   }
 }
-/* @media (max-width: 1086px) {
+@media (max-width: 1022px) {
   .btn-area {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
   }
-} */
-/* media */
+}
