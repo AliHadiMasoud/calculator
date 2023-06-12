@@ -240,6 +240,10 @@ body {
 .r-text {
   padding-top: 25px;
 }
+.history-text:hover,
+.memory-text:hover {
+  color: var(--color-hover);
+}
 /* right-side */
 /* media */
 @media (max-width: 1280px) {
@@ -280,10 +284,10 @@ body {
     padding: 10px 15px 8px 15px;
   }
 }
-@media (max-width: 1022px) {
+/* @media (max-width: 1022px) {
   .btn-area {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
   }
-}
+} */
